@@ -14,13 +14,17 @@
         <!-- HEADER -->
         <header class="header-hero">
             <h1>Dashboard</h1>
-            <div class="header-central">
+            <div class="header-center">
                 <img src="image/icon/icon-pesquisar-google.svg" alt="Busca" class="icon">
                 <input type="text" placeholder="Pesquisar">
             </div>
-            <div class="header-direita">
-                <img src="image/icon/icon-bell35px.svg" alt="Sino" class="icon">
-                <img src="image/icon/icone.png" alt="foto-personagem" class="icon-personagem">
+            <div class="header-right">
+                <button class="btn-notification">
+                    <img src="image/icon/icon-bell35px.svg" alt="Sino" class="icon">
+                </button>
+                <button class="btn-user">
+                    <img src="image/icon/icone.png" alt="foto-personagem" class="icon-personagem">
+                </button>
             </div>
         </header>
 
@@ -29,10 +33,22 @@
             <!-- SIDEBAR -->
             <nav class="sidebar-hero">
                 <ul class="sidebar-list">
-                    <li class="sidebar-item">Geral</li>
-                    <li class="sidebar-item">Analise</li>
-                    <li class="sidebar-item">Vendas</li>
-                    <li class="sidebar-item">Relatórios</li>
+                    <li class="sidebar-item">
+                        <img src="image/icon/star.png" alt="overview" class="icon-overview">
+                        Geral
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="image/icon/analytics.png" alt="analytics" class="icon-analytics">
+                        Análise
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="image/icon/vendas.png" alt="sales" class="icon-sales">
+                        Vendas
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="image/icon/relatorio.png" alt="reports" class="icon-reports">
+                        Relatórios
+                    </li>
                 </ul>
             </nav>
 
@@ -40,20 +56,21 @@
             <main class="conteudoGeral-hero">
 
                 <!-- CARDS DE RESUMO -->
-                <section class="item-resumo">
-                    <h2 class="titulo-resumo">Receita Total</h2>
-                    <p class="valor-resumo">$32,400</p>
+                <section class="summary-card">
+                    <h2 class="summary-title">Receita Total</h2>
+                    <p class="summary-value">$32,400</p>
                 </section>
 
-                <section class="item-resumo">
-                    <h2 class="titulo-resumo">Compras</h2>
-                    <p class="valor-resumo">1,136</p>
+                <section class="summary-card">
+                    <h2 class="summary-title">Compras</h2>
+                    <p class="summary-value">1,136</p>
                 </section>
 
-                <section class="item-resumo">
-                    <h2 class="titulo-resumo">Lucro</h2>
-                    <p class="valor-resumo">$9,020</p>
+                <section class="summary-card">
+                    <h2 class="summary-title">Lucro</h2>
+                    <p class="summary-value">$9,020</p>
                 </section>
+
 
                 <!-- GRÁFICO DE RECEITA -->
                 <section class="cards-hero">
@@ -72,6 +89,10 @@
                         </div>
                     </div>
                 </section>
+
+
+                <!-- CONTINUAR REFATORANDO AMANHA AQUI ABAIXO -->
+
 
                 <!-- CATEGORIAS (TÍTULO + LISTA + GRÁFICO) -->
                 <section class="categorias-card-hero">

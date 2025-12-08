@@ -1,6 +1,3 @@
-// =======================
-// GRÁFICO DE LINHAS (GRANDE)
-// =======================
 
 const ctxLinha = document.getElementById("meuGrafico");
 
@@ -39,11 +36,6 @@ if (ctxLinha) {
 }
 
 
-
-// =======================
-// GRÁFICO DE BARRAS (PEQUENO)
-// =======================
-
 const ctxBarras = document.getElementById("grafico-barras-pequeno");
 
 if (ctxBarras) {
@@ -80,19 +72,6 @@ if (ctxBarras) {
     });
 }
 
-
-
-// =======================
-// GRÁFICO DE PIZZA (CATEGORIAS)
-// =======================
-
-// =======================
-// PIZZA / DOUGHNUT — CATEGORIAS (substituir somente esta parte)
-// =======================
-// =======================
-// GRÁFICO DE PIZZA (CATEGORIAS)
-// =======================
-
 const canvasPizza = document.getElementById("grafico-pizza");
 
 if (canvasPizza) {
@@ -126,10 +105,6 @@ if (canvasPizza) {
     });
 }
 
-// =======================
-// GRÁFICO DE LINHA HORIZONTAL
-// =======================
-
 const linhaHorizontal = document.getElementById("grafico-linha-horizontal");
 
 if (linhaHorizontal) {
@@ -148,7 +123,7 @@ if (linhaHorizontal) {
             }]
         },
         options: {
-            indexAxis: "y", // 🔥 TRANSFORMA EM LINHA HORIZONTAL
+            indexAxis: "y", // 🔥 
             responsive: true,
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
