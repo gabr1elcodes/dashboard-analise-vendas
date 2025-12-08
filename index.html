@@ -5,100 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Dashboard - Analíse de Vendas</title>
+    <title>Dashboard - Análise de Vendas</title>
 </head>
 
 <body>
     <div class="container-hero">
+
+        <!-- HEADER -->
         <header class="header-hero">
             <h1>Dashboard</h1>
-            <div class="header-icones">
+            <div class="header-central">
                 <img src="image/icon/icon-pesquisar-google.svg" alt="Busca" class="icon">
                 <input type="text" placeholder="Pesquisar">
+            </div>
+            <div class="header-direita">
                 <img src="image/icon/icon-bell35px.svg" alt="Sino" class="icon">
                 <img src="image/icon/icone.png" alt="foto-personagem" class="icon-personagem">
             </div>
         </header>
+
         <div class="sidebar-container">
+            
+            <!-- SIDEBAR -->
             <nav class="sidebar-hero">
                 <ul class="sidebar-list">
-                    <li class="sidebar-item">Overview</li>
-                    <li class="sidebar-item">Analytics</li>
-                    <li class="sidebar-item">Sales</li>
-                    <li class="sidebar-item">Reports</li>
+                    <li class="sidebar-item">Geral</li>
+                    <li class="sidebar-item">Analise</li>
+                    <li class="sidebar-item">Vendas</li>
+                    <li class="sidebar-item">Relatórios</li>
                 </ul>
             </nav>
-            <!--  SEPARAÇÃO  -->
+
+            <!-- CONTEÚDO PRINCIPAL -->
             <main class="conteudoGeral-hero">
+
+                <!-- CARDS DE RESUMO -->
                 <section class="item-resumo">
                     <h2 class="titulo-resumo">Receita Total</h2>
                     <p class="valor-resumo">$32,400</p>
                 </section>
-                <!--  SEPARAÇÃO  -->
+
                 <section class="item-resumo">
                     <h2 class="titulo-resumo">Compras</h2>
                     <p class="valor-resumo">1,136</p>
                 </section>
-                <!--  CARDS PRINCIPAIS  -->
+
+                <section class="item-resumo">
+                    <h2 class="titulo-resumo">Lucro</h2>
+                    <p class="valor-resumo">$9,020</p>
+                </section>
+
+                <!-- GRÁFICO DE RECEITA -->
                 <section class="cards-hero">
-                    <div class="card-receita">
-                        <h2 class="card-titulo">Receita</h2>
-                        <p class="valor-card">4,000</p>
-                        <p class="valor-card">3,000</p>
-                        <p class="valor-card">2,000</p>
-                        <p class="valor-card">1,000</p>
-                        <div class="meses">
-                            <span>Jan</span>
-                            <span>Fev</span>
-                            <span>Mar</span>
-                            <span>Abr</span>
-                            <span>Mai</span>
-                            <span>Jun</span>
-                            <span>Jul</span>
-                            <span>Ago</span>
-                            <span>Set</span>
-                            <span>Out</span>
-                            <span>Nov</span>
-                            <span>Dez</span>
+                    <div class="grafico-container-hero">
+                        <div class="graficoLinhas">
+                            <canvas id="meuGrafico"></canvas>
                         </div>
-                        <div class="graficoLinhas"></div>
                     </div>
                 </section>
 
-                    <section class="vendas-hero">
-                        <h2>Vendas</h2>
-                        <p>3,000</p>
-                        <p>2,000</p>
-                        <p>1,000</p>
-                        <p>0</p>
-                        <div>
-                            <span>Abr</span>
-                            <span>Mai</span>
-                            <span>Jun</span>
+                <!-- GRÁFICO DE VENDAS MENOR -->
+                <section class="vendas-hero">
+                    <div class="grafico-vendas-card-hero">
+                        <div class="grafico-linha-vendas-hero">
+                            <canvas id="grafico-barras-pequeno"></canvas>
                         </div>
-                        <!-- Gráfico de linhas específico para vendas -->
-                        <section class="grafico-linha-vendas-hero"></section>   
-                    
-                    <section class="graficoVendas-hero">
-                        <h2>Vendas por Categorias</h2>
-                        <section class="redondo-hero"></section> <!-- Gráfico Redondo -->
-                        <ul class="lista-categorias">
-                            <li class="item-categoria">Roupas</li>
-                            <li class="item-categoria">Eletrônicos</li>
-                            <li class="item-categoria">Casa</li>
-                            <li class="item-categoria">Outros</li>
-                        </ul>
-                    </section>
-            </main>
+                    </div>
+                </section>
 
+                <!-- CATEGORIAS (TÍTULO + LISTA + GRÁFICO) -->
+                <section class="categorias-card-hero">
+                    <p class="titulo-categorias-hero">Categorias</p>
+                    <div class="grafico-categorias-container">
+                        <div>
+                            <ul class="lista-categorias">
+                                <li class="item-categoria" style="color:rgba(79,70,229,0.95)"><img src="image/icon/moda.png" alt="">Moda</img>
+                                <li class="item-categoria" style="color: #69109c;"><img src="image/icon/computador.png" alt="computador">Eletrônicos</li>
+                                <li class="item-categoria" style="color: #df80f7;"><img src="image/icon/produtos.png" alt="beleza">Beleza & Cuidados</li>
+                                <li class="item-categoria" style="color: #83abdb;"><img src="image/icon/outros.png" alt="outros">Outros</li>
+                            </ul>
+                        </div>
+
+                        <div class="redondo-hero">
+                            <canvas id="grafico-pizza" width="600" height="600"></canvas>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="grafico-horizontal-hero">
+                    <p class="titulo-horizontal-hero">Top Produtos</p>
+
+                    <div class="grafico-horizontal-container">
+                        <canvas id="grafico-linha-horizontal"></canvas>
+                    </div>
+                </section>
+
+            </main>
         </div>
+        <footer>
+        <p>© 2025 Gabriel Oliveira. Todos os direitos reservados.</p>
+    </footer>
     </div>
 
-    <footer>
-
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
-</body>
 
+</body>
 </html>
