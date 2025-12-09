@@ -22,9 +22,19 @@
                 <button class="btn-notification">
                     <img src="image/icon/icon-bell35px.svg" alt="Sino" class="icon">
                 </button>
-                <button class="btn-user">
-                    <img src="image/icon/icone.png" alt="foto-personagem" class="icon-personagem">
-                </button>
+                <div class="user-menu">
+                    <button class="btn-user" id="btnUser">
+                        <img src="image/icon/icone.png" alt="foto-personagem" class="icon-personagem">
+                    </button>
+                    <div class="dropdown" id="userDropdown">
+                        <ul>
+                            <li><a href="#"><img src="image/icon/settings.png" alt="config">Configurações</a></li>
+                            <li><a href="#"><img src="image/icon/icone.png" alt="icon-perfil">Perfil</a></li>
+                            <li><a href="#" id="darkModeToggle"><img src="image/icon/modo-dark.png" alt="dark">Modo Dark</a></li>
+                            <li><a href="#"><img src="image/icon/logout.png" alt="sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -73,52 +83,42 @@
 
 
                 <!-- GRÁFICO DE RECEITA -->
-                <section class="cards-hero">
-                    <div class="grafico-container-hero">
-                        <div class="graficoLinhas">
-                            <canvas id="meuGrafico"></canvas>
-                        </div>
+                <section class="card-left">
+                    <div class="grafic-left">
+                        <canvas id="myGrafic-left"></canvas>
                     </div>
                 </section>
 
                 <!-- GRÁFICO DE VENDAS MENOR -->
-                <section class="vendas-hero">
-                    <div class="grafico-vendas-card-hero">
-                        <div class="grafico-linha-vendas-hero">
-                            <canvas id="grafico-barras-pequeno"></canvas>
-                        </div>
+                <section class="card-right">
+                    <div class="grafic-right">
+                        <canvas id="myGrafic-right"></canvas>
                     </div>
                 </section>
+                <!-- CATEGORIAS + TOP PRODUTOS -->
+                <section class="card-categories">
+                    <p class="title-categories">Categorias</p>
+                    <div class="grafic-categories">
+                        <ul class="lista-categories">
+                            <li class="item-category"><img src="image/icon/moda.png" alt="">Moda</li>
+                            <li class="item-category"><img src="image/icon/computador.png" alt="computador">Eletrônicos</li>
+                            <li class="item-category"><img src="image/icon/produtos.png" alt="beleza">Beleza & Cuidados</li>
+                            <li class="item-category"><img src="image/icon/outros.png" alt="outros">Outros</li>
+                        </ul>
 
-
-                <!-- CONTINUAR REFATORANDO AMANHA AQUI ABAIXO -->
-
-
-                <!-- CATEGORIAS (TÍTULO + LISTA + GRÁFICO) -->
-                <section class="categorias-card-hero">
-                    <p class="titulo-categorias-hero">Categorias</p>
-                    <div class="grafico-categorias-container">
-                        <div>
-                            <ul class="lista-categorias">
-                                <li class="item-categoria" style="color:rgba(79,70,229,0.95)"><img src="image/icon/moda.png" alt="">Moda</img>
-                                <li class="item-categoria" style="color: #69109c;"><img src="image/icon/computador.png" alt="computador">Eletrônicos</li>
-                                <li class="item-categoria" style="color: #df80f7;"><img src="image/icon/produtos.png" alt="beleza">Beleza & Cuidados</li>
-                                <li class="item-categoria" style="color: #83abdb;"><img src="image/icon/outros.png" alt="outros">Outros</li>
-                            </ul>
-                        </div>
-
-                        <div class="redondo-hero">
-                            <canvas id="grafico-pizza" width="600" height="600"></canvas>
+                        <div class="grafic-pizza">
+                            <canvas id="grafic-pizza" width="600" height="600"></canvas>
                         </div>
 
                     </div>
                 </section>
 
-                <section class="grafico-horizontal-hero">
-                    <p class="titulo-horizontal-hero">Top Produtos</p>
-
-                    <div class="grafico-horizontal-container">
-                        <canvas id="grafico-linha-horizontal"></canvas>
+                <section class="graphics-products">
+                    <div class="box-control">
+                        <p class="title-products">Top Produtos</p>
+                        <div class="graphics">
+                            <canvas id="graphics-charts"></canvas>
+                        </div>
                     </div>
                 </section>
 

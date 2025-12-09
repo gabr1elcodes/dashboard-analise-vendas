@@ -1,5 +1,5 @@
 
-const ctxLinha = document.getElementById("meuGrafico");
+const ctxLinha = document.getElementById("myGrafic-left");
 
 if (ctxLinha) {
     new Chart(ctxLinha, {
@@ -36,7 +36,7 @@ if (ctxLinha) {
 }
 
 
-const ctxBarras = document.getElementById("grafico-barras-pequeno");
+const ctxBarras = document.getElementById("myGrafic-right");
 
 if (ctxBarras) {
     new Chart(ctxBarras, {
@@ -72,7 +72,7 @@ if (ctxBarras) {
     });
 }
 
-const canvasPizza = document.getElementById("grafico-pizza");
+const canvasPizza = document.getElementById("grafic-pizza");
 
 if (canvasPizza) {
 
@@ -105,7 +105,7 @@ if (canvasPizza) {
     });
 }
 
-const linhaHorizontal = document.getElementById("grafico-linha-horizontal");
+const linhaHorizontal = document.getElementById("graphics-charts");
 
 if (linhaHorizontal) {
     new Chart(linhaHorizontal, {
@@ -113,7 +113,7 @@ if (linhaHorizontal) {
         data: {
             labels: ["Moda", "Eletrônicos", "Beleza & Cuidados", "Outros"],
             datasets: [{
-                data: [150, 130, 120, 140],
+                data: [146, 142, 140, 144],
                 borderColor: "#4F46E5",
                 backgroundColor: "rgba(79,70,229,0.20)",
                 borderWidth: 3,
@@ -140,6 +140,25 @@ if (linhaHorizontal) {
         }
     });
 }
+
+const btnUser = document.getElementById('btnUser');
+const userDropdown = document.getElementById('userDropdown');
+
+btnUser.addEventListener('click', (e) => {
+    e.stopPropagation();
+    userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('click', () => {
+    userDropdown.style.display = 'none';
+});
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.body.classList.toggle('dark-mode');
+
+});
 
 
 

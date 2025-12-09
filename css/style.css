@@ -165,7 +165,7 @@ body {
     max-width: 25px;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO (Tudo menos, header & sidebar lateral) */
 .conteudoGeral-hero {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -197,21 +197,22 @@ body {
     color: #2F3E65;
 }
 
-/* GRÁFICO DE RECEITA CHARTJS PRINCIPAL */ 
-/* === Refatoração pausada aqui - CONTINUAR AQUI EMBAIXO AMANHÃ === */
+/* CHARTJS ESQUERDA */ 
 
-.cards-hero {
+.card-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding: 10px;
     background-color: white;
     border-radius: 12px;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
     margin-bottom: 20px;
     grid-column: span 2;
 }
 
-.graficoLinhas {
-    display: flex;
+.grafic-left {
     flex: 1;
     width: 100%;
     height: 250px;
@@ -219,36 +220,21 @@ body {
     border-radius: 8px;
 }
 
-.meses {
+/* CHARTJS DIREITA */
+.card-right {
     display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #9ca3af;
-    margin-top: 10px;
-}
-
-/* GRÁFICO DE VENDAS MENOR DO LADO DIREITO DE MESES */
-.vendas-hero {
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 400px;
     height: 200px;
     background-color: white;
     border-radius: 12px;
-    padding: 10px 15px;
+    padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.10);
 }
 
-.grafico-container-hero {
-    flex: 1;
-    display: flex;
-}
-
-.grafico-container-hero canvas {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.grafico-linha-vendas-hero {
+.grafic-right {
     flex: 1;
     width: 100%;
     height: 100%;
@@ -256,175 +242,329 @@ body {
     border-radius: 8px;
 }
 
+#myGrafic-right {
+    width: 100% !important;
+    height: 100% !important;
+}
 
-/* SEÇÃO CATEGORIAS */
-.linha-horizontal-cima {
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.dropdown ul {
+    display: block;
+    padding: 40px 50px;
+    line-height: 50px;
+    color: #FFF;
+    transition: background 0.2s;
+    list-style: none;
+    text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown img {
+    margin: 10px;
+    max-width: 20px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode .dropdown {
+    background-color: #ffffff;
+}
+
+.dark-mode .dropdown ul li a:hover  {
+    background-color: #333;
+}
+
+.dark-mode h1 {
+    color: white;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a,
+.dark-mode li {
+    color: #000000;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    color: #f5f5f5;
+}
+
+.dark-mode input::placeholder {
+    color: #bbb;
+}
+
+/* CATEGORIAS & CHARTJS PIZZA */
+.card-categories {
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.title-categories {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.grafic-categories {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;          
+    width: 100%;
+}
+
+.lista-categories {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.linha-horizontal-baixo {
-    display: flex;
-    gap: 20px;
-    text-align: center;
-}
-
-/* GRÁFICO DE CATEGORIAS */
-.graficoVendas-hero {
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.lista-categorias {
     list-style: none;
-    line-height: 40px;
+    gap: 20px;
 }
 
-.item-categoria {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.redondo-hero {
-    width: 600px;
-    height: 600px;
-    background-color: #eee; /* placeholder antes do chart */
-    border-radius: 50%;
-}
-
-.grafico-categorias-container {
-    display: flex;
-    justify-content: flex-start; /* lista à esquerda, gráfico à direita */
-    align-items: flex-start;     /* alinha no topo */
-    gap: 40px;                   /* espaço entre lista e gráfico */
-    width: 100%;
-    flex-wrap: nowrap;            /* evita que quebre para baixo */
-    padding: 20px 0;
-    box-sizing: border-box;
-}
-
-.item-categoria {
+.item-category {
     display: flex;
     align-items: center;
     font-size: 16px;
-    white-space: nowrap; /* impede quebra de texto */
+    white-space: nowrap;
 }
 
-.item-categoria img {
+.item-category img {
     width: 28px;
     height: 28px;
     margin-right: 10px;
 }
 
-/* Container do gráfico de pizza */
-.redondo-hero {
-    flex: 1;                  /* ocupa todo espaço restante */
-    max-width: 700px;         /* tamanho máximo do gráfico */
-    aspect-ratio: 1 / 1;      /* mantém o círculo perfeito */
-    position: relative;
+.grafic-pizza {
+    width: 220px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
 }
 
-.redondo-hero canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+.grafic-pizza canvas {
     width: 100% !important;
     height: 100% !important;
 }
 
-#grafico-pizza {
+/* TOP PRODUTOS & CHARTJS */
+.graphics-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    padding-bottom: 200px;
 }
 
-.redondo-hero canvas {
-    position: absolute;
-    inset: 0;
-}
-.redondo-hero {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-}
-
-.redondo-hero canvas {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.titulo-categorias-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    padding-left: 95px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Container do gráfico horizontal */
-.grafico-horizontal-hero {
-    margin-top: 40px;
+.box-control {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* empurra para a direita */
-    width: 100%;
+    align-items: center;
+    padding-left: 130px;
 }
 
-/* título */
-.titulo-horizontal-hero {
-    margin-top: 10px;
-    font-size: 20px;
-    margin-bottom: 10px;
+.title-products {
+    text-align: center;
+    font-size: 22px;
     font-weight: bold;
+    width: 100%;
+    padding-bottom: 25px;
 }
 
-/* Caixa do gráfico */
-.grafico-horizontal-container {
-    width: 420px; /* controla o tamanho e posição */
-    height: 260px;
-    background: #fff;
+.graphics {
+    width: 400px;
+    height: 240px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 20px;
+    box-sizing: border-box;
 }
 
-.grafico-horizontal-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 🔥 centraliza tudo */
-    width: 100%;
-    margin-left: 150px;
-    margin-bottom: 100px;
-}
-
-.titulo-horizontal-hero {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.grafico-horizontal-container {
-    display: flex;
-    width: 420px;  /* largura exata do gráfico */
-    height: 260px;
-    position: relative;
+canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 footer {
     color: black;
     text-align: center;
+}
+
+@media (max-width: 1024px) {
+
+    .sidebar-hero {
+        width: 180px;
+    }
+
+    .box-control {
+        padding-left: 60px;
+    }
+
+    .grafico-horizontal-container {
+        width: 350px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .sidebar-container {
+        flex-direction: column;
+    }
+
+    .sidebar-hero {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        min-height: auto;
+        padding: 15px 0;
+    }
+
+    .conteudoGeral-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .card-left {
+        grid-column: span 1;
+    }
+
+    .grafic-categories {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box-control {
+        padding-left: 0; 
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header-hero {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-center {
+        max-width: 100%;
+    }
+
+    .sidebar-hero {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .grafic-pizza {
+        width: 150px;
+    }
+
+    .grafico-horizontal-container {
+        width: 300px;
+        height: 200px;
+    }
+
+    .title-products {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .grafico-horizontal-container {
+        width: 260px;
+        height: 180px;
+    }
+
+    .box-control {
+        padding-left: 0 !important; 
+    }
+
+    .title-products {
+        font-size: 18px;
+    }
+
+    .lista-categories {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .summary-card {
+        flex: 1 1 45%; 
+    }
+
+    .card-left, .card-right, .grafico-horizontal-container, .grafic-pizza {
+        width: 100%;
+    }
+
+    .grafic-left, .grafic-right {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudoGeral-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        flex: 1 1 100%; 
+    }
+
+    .grafic-left, .grafic-right, .grafico-horizontal-container, .grafic-pizza {
+        width: 100%;
+        height: auto;
+    }
+
+    .grafic-left, .grafic-right {
+        height: 200px;
+    }
+}
+
+@media (max-width: 430px) {
+    .summary-card {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .title-products, .title-categories {
+        font-size: 18px;
+    }
+
+    .grafic-left, .grafic-right, .grafico-horizontal-container, .grafic-pizza {
+        width: 100%;
+        height: 180px;
+    }
+
+    .box-control {
+        padding-left: 10px;
+    }
 }
