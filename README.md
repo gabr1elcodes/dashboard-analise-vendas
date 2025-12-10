@@ -4,7 +4,7 @@ Dashboard Análise de vendas!
 
 
 🔗 Links: 
-- [Deploy no Vercel](link-do-projeto)  
+- [Deploy no Vercel]([link-do-projeto](https://dashboard-analise-venda.vercel.app/))  
 - [Repositório GitHub](https://github.com/gabr1elcodes?tab=repositories)
 
 - Dashboard administrativo com gráficos interativos(chart.js), menu de perfil e responsividade completa, desenvolvido para estudo prático e portfólio.
