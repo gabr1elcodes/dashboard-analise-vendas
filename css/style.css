@@ -280,8 +280,36 @@ body {
 }
 
 .dropdown img {
+    align-items: center;
     margin: 10px;
-    max-width: 20px;
+    max-width: 25px;
+}
+
+.dropdown-iconePerfil {
+    border-radius: 50%;
+    border: 5px;
+}
+
+.menu-dropdown {
+  display: flex; 
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-dropdown li a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .dark-mode {
