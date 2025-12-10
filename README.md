@@ -1,4 +1,5 @@
 Dashboard Análise de vendas!
+
 <img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/631d164b-8cf1-41be-be5b-d24e74d80364" />
 <img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/dbd797df-01c6-4a13-9032-ba699c2a49db" />
 
